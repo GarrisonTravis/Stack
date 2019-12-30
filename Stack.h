@@ -17,13 +17,15 @@ struct Node {
 template <class Type>
 class Stack {
 private:
-	int size;
+	int s;
 	Node<Type>* top;
 
 public:
-	Stack() : size(0), top(NULL) {};
+	Stack() : s(0), top(NULL) {};
 	void push(Type);
 	Type pop();
+	bool empty();
+	int size();
 	void print();
 };
 
