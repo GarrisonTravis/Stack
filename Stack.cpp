@@ -17,6 +17,7 @@ void Stack<Type>::push(Type val) {
 		newNode->next = top;
 		top = newNode;
 	}
+	s++;
 }
 
 //Pops off the top element on the stack
@@ -34,6 +35,8 @@ Type Stack<Type>::pop() {
 		val = temp->val;
 		delete temp;
 
+		s--;
+
 		return val;
 	}
 	else {
@@ -41,16 +44,31 @@ Type Stack<Type>::pop() {
 	}
 }
 
+//Returns true if the stack is empty
+//Returns false if the stack is not empty
+template <class Type>
+bool Stack<Type>::empty() {
+	if (top)
+		return false;
+	else
+		return true;
+}
+
+//Returns the size of the stack
+template <class Type>
+int Stack<Type>::size() {
+	return s;
+}
+
 //Outputs the current stack to the screen
 template <class Type>
 void Stack<Type>::print() {
 	Node<Type>* current = top;
 
-	cout << "Stack (First Element in Top) : " << endl;
-	cout << "------------------------------" << endl;
+	cout << "Stack (First Element is the Top) : " << endl;
+	cout << "----------------------------------" << endl;
 	while (current) {
 		cout << current->val << endl;
 		current = current->next;
 	}
-	cout << endl;
 }
