@@ -9,3 +9,4 @@ Operations:
   - top
   - empty
   - size
+  - print
