@@ -1,14 +1,14 @@
 # Stack
 
-This repository contains the code for a Stack created with a linked list structure. 
+This repository contains the code for a templated Stack created with a linked list structure. 
 
 Operations:
 -----------
-  - push
-  - pop
-  - top
-  - empty
-  - size
+  - push   O(1)
+  - pop    O(1)
+  - top    O(1)
+  - empty  O(1)
+  - size   O(1)
   - print
 
 
