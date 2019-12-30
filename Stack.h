@@ -21,8 +21,9 @@ private:
 	Node<Type>* top;
 
 public:
-	Stack() : top(NULL) {};
+	Stack() : size(0), top(NULL) {};
 	void push(Type);
+	Type pop();
 	void print();
 };
 
