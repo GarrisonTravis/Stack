@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdexcept>
 #include "Stack.h"
 using namespace std;
 
@@ -15,6 +16,28 @@ void Stack<Type>::push(Type val) {
 	else {
 		newNode->next = top;
 		top = newNode;
+	}
+}
+
+//Pops off the top element on the stack
+//Post: The stack will no longer contain the top element
+//O(1)
+template <class Type>
+Type Stack<Type>::pop() {
+	
+	if (top) {
+		Type val;
+		Node<Type>* temp = top;
+
+		top = top->next;
+
+		val = temp->val;
+		delete temp;
+
+		return val;
+	}
+	else {
+		throw runtime_error("Stack is Empty.");
 	}
 }
 
