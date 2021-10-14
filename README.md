@@ -10,6 +10,3 @@ Operations:
   - empty  O(1)
   - size   O(1)
   - print
-
-
-Property of Garrison Travis
